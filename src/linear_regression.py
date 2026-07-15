@@ -4,7 +4,7 @@ from sklearn.linear_model import LinearRegression
 
 df = pd.read_csv("data/wine.csv")
 
-X = df[["alcohol", "volatile acidity", "sulphates"]]
+X = df[["alcohol"]]
 
 y = df["quality"]
 
@@ -16,8 +16,8 @@ y_pred = model.predict(X)
 
 plt.figure(figsize=(6, 6))
 plt.scatter(y, y_pred)
-plt.xlabel("Quality")
-plt.ylabel("Predicted Quality")
+plt.xlabel("Actual Quality")
+plt.ylabel("Predicted Qualit")
 plt.title("Linear Regression")
 plt.grid(True)
 
